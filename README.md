@@ -29,6 +29,25 @@ Step-by-step guide for executing token swaps using the 0x API (Swap API v2 and G
 - Permit2: advanced — time-limited approvals, EIP-712 signing
 - Gasless API: no native token (e.g., ETH) needed, fee deducted from sell tokens
 
+## MCP Server
+
+The 0x MCP server gives your AI agent live access to 0x documentation and API references — so it can look up the latest endpoints, parameters, and code examples without relying on training data.
+
+**Endpoint:** `https://docs.0x.org/_mcp/server`
+
+Automatically configured when you install via `npx skills add 0xProject/0x-ai`. To add it manually:
+
+```json
+{
+  "mcpServers": {
+    "0x-mcp": {
+      "type": "url",
+      "url": "https://docs.0x.org/_mcp/server"
+    }
+  }
+}
+```
+
 ## Usage (after install)
 
 Once installed, invoke in any session:
