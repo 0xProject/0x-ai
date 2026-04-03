@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "0x-mcp": {
+      "type": "url",
+      "url": "https://docs.0x.org/_mcp/server"
+    }
+  }
+}
