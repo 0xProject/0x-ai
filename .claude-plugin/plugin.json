@@ -1,7 +1,7 @@
 {
   "name": "0x-ai",
   "version": "1.0.0",
-  "description": "Official 0x AI tools for token swaps and DeFi integrations. Covers Swap API v2 (AllowanceHolder and Permit2) and Gasless API v2 across supported chains.",
+  "description": "Official 0x skills for integrating token swaps into your app. Covers Swap API v2 (AllowanceHolder and Permit2), Gasless API v2, and multi-chain support.",
   "author": {
     "name": "0x",
     "email": "devrel@0x.org"
