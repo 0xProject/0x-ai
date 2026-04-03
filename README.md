@@ -29,15 +29,11 @@ Step-by-step guide for executing token swaps using the 0x Protocol API (Swap API
 - Permit2: advanced — time-limited approvals, EIP-712 signing
 - Gasless API: no native token (e.g., ETH) needed, fee deducted from sell tokens
 
-## Manual Installation (Claude Code)
+## Usage (after install)
 
-```bash
-/plugin install 0x-swap@claude-plugins-official
+Once installed, invoke in any session:
 ```
-
-Or invoke directly in any session:
-```
-/0x-swap
+/0x-api
 ```
 
 ## Getting a 0x API Key
