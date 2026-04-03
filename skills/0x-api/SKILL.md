@@ -1,5 +1,5 @@
 ---
-name: 0x-swap
+name: 0x-api
 description: >
   Step-by-step guide for executing token swaps using the 0x API (Swap API v2 and
   Gasless API v2). Use this skill when a user wants to: swap tokens on any EVM chain (e.g.
