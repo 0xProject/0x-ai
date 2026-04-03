@@ -12,7 +12,7 @@ Works with Claude Code, Cursor, GitHub Copilot, and 30+ other AI coding agents.
 
 ## Skills
 
-### 0x-swap
+### 0x-api
 
 Step-by-step guide for executing token swaps using the 0x API (Swap API v2 and Gasless API v2).
 
