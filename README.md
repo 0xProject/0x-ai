@@ -1,6 +1,6 @@
 # 0x AI
 
-Official 0x AI tools for developers building token swaps and DeFi integrations.
+Official [0x](https://docs.0x.org/home/home) AI tools for developers building token swaps and DeFi integrations.
 
 ## Quick Start
 
@@ -14,10 +14,10 @@ Works with Claude Code, Cursor, GitHub Copilot, and 30+ other AI coding agents.
 
 ### 0x-swap
 
-Step-by-step guide for executing token swaps using the 0x Protocol API (Swap API v2 and Gasless API v2).
+Step-by-step guide for executing token swaps using the 0x API (Swap API v2 and Gasless API v2).
 
 **Use this skill when you want to:**
-- Swap tokens on any EVM chain (Ethereum, Base, Arbitrum, Polygon, Optimism, BNB Chain)
+- Swap tokens on all [supported EVM chains](https://docs.0x.org/docs/introduction/supported-chains)
 - Do a gasless swap without holding ETH for gas
 - Integrate 0x into a dApp in TypeScript or Python
 - Use 0x with a Gnosis Safe or multisig wallet
