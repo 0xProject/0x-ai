@@ -13,6 +13,7 @@ description: >
 mcp_servers:
   - name: 0x-mcp
     url: https://docs.0x.org/_mcp/server
+license: MIT
 ---
 
 # 0x Token Swap Guide
