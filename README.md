@@ -8,7 +8,7 @@ Official [0x](https://docs.0x.org/home/home) AI tools for developers building to
 npx skills add 0xProject/0x-ai
 ```
 
-Works with Claude Code, Cursor, GitHub Copilot, and 30+ other AI coding agents.
+Works with Claude Code, Cursor, GitHub Copilot, and other AI coding agents.
 
 ## Skills
 
