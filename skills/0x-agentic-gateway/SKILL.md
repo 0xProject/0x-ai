@@ -238,7 +238,7 @@ const quoteRes = await mppx.fetch(`${BASE_URL}/swap-allowance-holder-quote/?${pa
 const quote = await quoteRes.json();
 
 // quote.transaction.to   — AllowanceHolder contract address
-// quote.transaction.data — calldata to submit on Base
+// quote.transaction.data — calldata to submit on the target EVM chain
 ```
 
 ### Rules
