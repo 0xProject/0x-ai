@@ -10,24 +10,31 @@ npx skills add 0xProject/0x-ai
 
 Works with Claude Code, Cursor, GitHub Copilot, and other AI coding agents.
 
+## Which skill should I use?
+
+| What you're doing | Use this skill |
+| --- | --- |
+| Swap tokens and you have (or can create) a 0x API key | `0x-api` |
+| Swap tokens without an API key, autonomous agent paying per-request, or you explicitly want x402/MPP | `0x-agentic-gateway` |
+
 ## Skills
 
-### 0x-api
+### `skills/0x-api`
 
-Step-by-step guide for executing token swaps using the 0x API (Swap API v2 and Gasless API v2).
+Step-by-step guide for executing token swaps using the 0x API (Swap API v2 and Gasless API v2). Covers AllowanceHolder, Permit2, and Gasless flows in TypeScript and Python across all supported EVM chains.
 
-**Use this skill when you want to:**
-- Swap tokens on all [supported EVM chains](https://docs.0x.org/docs/introduction/supported-chains)
-- Do a gasless swap without holding ETH for gas
-- Integrate 0x into a dApp in TypeScript or Python
-- Use 0x with a Gnosis Safe or multisig wallet
-- Migrate from 0x Swap v1 to v2
-- Debug 0x API errors
+- **Auth:** API key via `0x-api-key` header
+- **Setup:** sign up at [dashboard.0x.org](https://dashboard.0x.org/create-account)
+- **Entry point:** [`skills/0x-api/SKILL.md`](skills/0x-api/SKILL.md)
 
-**Supported flows:**
-- AllowanceHolder: recommended — simple approve + send tx, works with multisigs
-- Permit2: advanced — time-limited approvals, EIP-712 signing
-- Gasless API: no native token (e.g., ETH) needed, fee deducted from sell tokens
+### `skills/0x-agentic-gateway`
+
+Specialized skill for accessing 0x swap APIs without an API key, using per-request USDC micropayments over HTTP 402. Covers both x402 (EVM and Solana wallets) and MPP (Tempo Mainnet) payment protocols.
+
+- **Auth:** wallet-based payment — USDC on Base or Solana (x402) or USDC.e on Tempo Mainnet (MPP)
+- **Protocols:** x402 (`@x402/fetch`, `@x402/evm` / `@x402/svm`) or MPP (`mppx`)
+- **Setup:** fund a wallet with USDC (x402) or USDC.e (MPP); no API key needed
+- **Entry point:** [`skills/0x-agentic-gateway/SKILL.md`](skills/0x-agentic-gateway/SKILL.md)
 
 ## MCP Server
 
@@ -53,6 +60,7 @@ Automatically configured when you install via `npx skills add 0xProject/0x-ai`. 
 Once installed, invoke in any session:
 ```
 /0x-api
+/0x-agentic-gateway
 ```
 
 ## Getting a 0x API Key
