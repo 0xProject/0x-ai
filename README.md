@@ -25,15 +25,17 @@ Step-by-step guide for executing token swaps using the 0x API (Swap API v2 and G
 
 - **Auth:** API key via `0x-api-key` header
 - **Setup:** sign up at [dashboard.0x.org](https://dashboard.0x.org/create-account)
+- **Swap execution chains:** [all Swap API supported EVM chains](https://docs.0x.org/docs/introduction/supported-chains#swap-and-gasless-apis)
 - **Entry point:** [`skills/0x-api/SKILL.md`](skills/0x-api/SKILL.md)
 
 ### `skills/0x-agentic-gateway`
 
-Specialized skill for accessing 0x swap APIs without an API key, using per-request USDC micropayments over HTTP 402. Covers both x402 (EVM and Solana wallets) and MPP (Tempo Mainnet) payment protocols.
+Specialized skill for accessing 0x Swap API across [all supported EVM chains](https://docs.0x.org/docs/introduction/supported-chains#swap-and-gasless-apis) without an API key, using per-request USDC micropayments over HTTP 402. Covers both x402 (EVM and Solana wallets) and MPP (Tempo Mainnet) payment protocols.
 
 - **Auth:** wallet-based payment — USDC on Base or Solana (x402) or USDC.e on Tempo Mainnet (MPP)
 - **Protocols:** x402 (`@x402/fetch`, `@x402/evm` / `@x402/svm`) or MPP (`mppx`)
 - **Setup:** fund a wallet with USDC (x402) or USDC.e (MPP); no API key needed
+- **Swap execution chains:** [all Swap API supported EVM chains](https://docs.0x.org/docs/introduction/supported-chains#swap-and-gasless-apis)
 - **Entry point:** [`skills/0x-agentic-gateway/SKILL.md`](skills/0x-agentic-gateway/SKILL.md)
 
 ## MCP Server
