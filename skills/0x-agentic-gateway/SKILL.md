@@ -43,9 +43,9 @@ Both networks use the same URLs. The payment scheme registered in the client det
 Ask the user which wallet they have before writing setup code:
 
 1. **EVM wallet** — pays USDC on Base (`0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913`)
-2. **Solana wallet** — pays USDC on Solana mainnet (`EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v`). Also requires an EVM private key — used only as the taker address in swap quotes (swap execution always runs on Base).
+2. **Solana wallet** — pays USDC on Solana mainnet (`EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v`). Also requires an EVM private key — used only as the taker address in swap quotes (swap execution runs on EVM, so the taker must be an EVM address).
 
-Never correlate wallet type with the swap chain. An EVM wallet paying on Base and a Solana wallet paying on Solana can both query the same Base swap endpoints.
+Never correlate wallet type with the swap chain. A Solana wallet paying on Solana can execute a swap on any 0x-supported EVM chain.
 
 ### Install
 
@@ -144,7 +144,7 @@ const params =
 const priceRes = await x402Fetch(`${BASE}/swap-allowance-holder-price/${params}`);
 const price = await priceRes.json();
 
-// EVM address as taker — swap executes on Base regardless of payment chain
+// EVM address as taker — swap executes on EVM; payment chain is independent
 const quoteRes = await x402Fetch(
   `${BASE}/swap-allowance-holder-quote/${params}&taker=${evmAccount.address}`
 );
@@ -184,7 +184,7 @@ const settlement = JSON.parse(
 | `https://agent.api.0x.org/v1/mpp-tempo/swap-allowance-holder-quote/` | Firm quote with transaction calldata |
 
 **Payment network:** Tempo Mainnet (chainId 4217), USDC.e (`0x20C000000000000000000000b9537d11c60E8b50`).  
-**Swap execution:** always on Base (chainId 8453). These are separate — USDC.e on Tempo pays for API access; the swap settles on Base.  
+**Swap execution:** runs on any 0x-supported EVM chain (set via `chainId`). These are separate — USDC.e on Tempo pays for API access; the swap settles on the EVM chain you specify.  
 **Cost:** $0.01 USDC.e per request.
 
 ### Install
@@ -253,7 +253,7 @@ const quote = await quoteRes.json();
 
 | Parameter | Description |
 |---|---|
-| `chainId` | Chain for swap execution. Currently Base (`8453`) only. |
+| `chainId` | Chain for swap execution. Any 0x-supported EVM chain. |
 | `sellToken` | Contract address of token to sell |
 | `buyToken` | Contract address of token to buy |
 | `sellAmount` | Amount in token base units |
