@@ -45,7 +45,7 @@ Ask the user which wallet they have before writing setup code:
 1. **EVM wallet** — pays USDC on Base (`0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913`)
 2. **Solana wallet** — pays USDC on Solana mainnet (`EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v`). Also requires an EVM private key — used only as the taker address in swap quotes (swap execution runs on EVM, so the taker must be an EVM address).
 
-Never correlate wallet type with the swap chain. A Solana wallet paying on Solana can execute a swap on any 0x-supported EVM chain.
+Never correlate wallet type with the swap chain. A Solana wallet paying on Solana can execute a swap on any [0x-supported EVM chain](https://docs.0x.org/docs/introduction/supported-chains).
 
 ### Install
 
@@ -253,7 +253,7 @@ const quote = await quoteRes.json();
 
 | Parameter | Description |
 |---|---|
-| `chainId` | Chain for swap execution. Any 0x-supported EVM chain. |
+| `chainId` | Chain for swap execution. See [supported chains](https://docs.0x.org/docs/introduction/supported-chains). |
 | `sellToken` | Contract address of token to sell |
 | `buyToken` | Contract address of token to buy |
 | `sellAmount` | Amount in token base units |
