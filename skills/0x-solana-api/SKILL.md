@@ -21,7 +21,7 @@ The 0x Solana Swap API returns the instructions for a swap. The integrator puts 
 Read these before writing code; they are kept current, this skill is not a copy of them.
 
 - Guide: https://docs.0x.org/solana/guides/get-started.md
-- Request and response fields: https://docs.0x.org/api-reference/solana-swap-ap-is/swap/instructions.md
+- Request and response fields: https://docs.0x.org/api-reference/solana-swap-api/swap/instructions.md
 - Swap fees: https://docs.0x.org/solana/guides/swap-fees.md
 - Errors and common questions: https://docs.0x.org/solana/need-help/faq.md
 - Runnable example: https://github.com/0xProject/0x-examples/tree/main/solana-example
