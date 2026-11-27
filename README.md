@@ -31,7 +31,7 @@ Step-by-step guide for executing token swaps using the 0x API (Swap API v2 and G
 
 ### `skills/0x-solana-api`
 
-Guide for swapping tokens on Solana with the 0x Solana Swap API: requesting swap instructions, building and sending a v1 transaction with Solana Kit, swap fees, sponsorship, and error codes.
+Guide for swapping tokens on Solana with the 0x Solana Swap API. It holds the rules that are easy to get wrong and points the agent to the docs and the runnable example for everything else.
 
 - **Auth:** API key via `0x-api-key` header
 - **Setup:** sign up at [dashboard.0x.org](https://dashboard.0x.org/create-account)
