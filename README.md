@@ -14,7 +14,8 @@ Works with Claude Code, Cursor, GitHub Copilot, and other AI coding agents.
 
 | What you're doing | Use this skill |
 | --- | --- |
-| Swap tokens and you have (or can create) a 0x API key | `0x-api` |
+| Swap tokens on an EVM chain and you have (or can create) a 0x API key | `0x-api` |
+| Swap tokens on Solana with a 0x API key | `0x-solana-api` |
 | Swap tokens without an API key, autonomous agent paying per-request, or you explicitly want x402/MPP | `0x-agentic-gateway` |
 
 ## Skills
@@ -27,6 +28,14 @@ Step-by-step guide for executing token swaps using the 0x API (Swap API v2 and G
 - **Setup:** sign up at [dashboard.0x.org](https://dashboard.0x.org/create-account)
 - **Swap execution chains:** [all Swap API supported EVM chains](https://docs.0x.org/docs/introduction/supported-chains#swap-and-gasless-apis)
 - **Entry point:** [`skills/0x-api/SKILL.md`](skills/0x-api/SKILL.md)
+
+### `skills/0x-solana-api`
+
+Guide for swapping tokens on Solana with the 0x Solana Swap API: requesting swap instructions, building and sending a v1 transaction with Solana Kit, swap fees, sponsorship, and error codes.
+
+- **Auth:** API key via `0x-api-key` header
+- **Setup:** sign up at [dashboard.0x.org](https://dashboard.0x.org/create-account)
+- **Entry point:** [`skills/0x-solana-api/SKILL.md`](skills/0x-solana-api/SKILL.md)
 
 ### `skills/0x-agentic-gateway`
 
@@ -62,6 +71,7 @@ Automatically configured when you install via `npx skills add 0xProject/0x-ai`. 
 Once installed, invoke in any session:
 ```
 /0x-api
+/0x-solana-api
 /0x-agentic-gateway
 ```
 
