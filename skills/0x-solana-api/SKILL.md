@@ -141,7 +141,7 @@ Only if the user's wallet cannot sign v1: request `transaction_version: "v0"`, l
 ## Step 5: Swap fees
 
 - `swap_fee_ppm`: parts per million, not basis points. `10000` = 1%.
-- `swap_fee_recipient`: a wallet (native SOL fee), an existing token account, or `{"associatedTokenAccount": {"owner": "<wallet>"}}`, which the instructions create if needed.
+- `swap_fee_recipient`: a comma-separated string of addresses, or a JSON array with one entry per fee. An entry is a wallet (native SOL fee), an existing token account, or `{"associatedTokenAccount": {"owner": "<wallet>"}}`, which the instructions create if needed. A bare address for a token fee must be an existing token account, not a wallet.
 - `swap_fee_side`: `buy` (output token, default) or `sell` (input token).
 - Each field takes a comma-separated list for several fees. Fees on one side apply one after another.
 - Each entry is capped at `100000` (10%) by default. `amount_out` is already net of buy-side fees.
